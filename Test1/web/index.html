@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="Starter">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+       
+
+        <!-- build:css css/vendor.css   -->
+        <link rel="stylesheet" href="assets/libs/bootstrap-css/css/bootstrap.css ">
+        <!-- endbuild -->
+
+        <!-- build:css css/main.css   -->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <!-- endbuild -->
+	
+    </head>
+    
+    <body>
+        <div class="container" ng-controller="HomeController">
+        	<h3>Affichage des enregisrements knknjkn</h3> 
+            <table border="1" width="100%">
+  <tr>
+    <th ng-click="orderByMe('name')">Name</th>
+    <th ng-click="orderByMe('country')">Country</th>
+  </tr>
+  <tr ng-repeat="x in people  | orderBy:myOrderBy">
+    <td>{{x.name}}</td>
+    <td>{{x.country}}</td>
+  </tr>
+  
+</table>
+        </div>
+
+        <!-- build:js scripts/vendor.js   -->
+        <script src="assets/libs/angular/angular.js"></script>
+        <script src="assets/libs/angular-wakanda/angular-wakanda.js"></script>
+        <!-- endbuild -->
+        
+    	<!-- build:js scripts/main.js   -->
+        <script src="app/app.js"></script>
+        <script src="app/controllers/home.js"></script>
+        <!-- endbuild -->
+
+    </body>
+</html>
